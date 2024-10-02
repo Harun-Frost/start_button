@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Button & Credits</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Cool Button Styling */
+        .cool-button {
+            padding: 20px 50px;
+            font-size: 2em;
+            color: white;
+            background-color: #6200ea;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        /* Button Animation Effects */
+        .cool-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cool-button:hover::before {
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+        }
+
+        .cool-button:hover {
+            background-color: #3700b3;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 15px rgba(98, 0, 234, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(98, 0, 234, 1);
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Ensures the button and footer are visible on small screens */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Cool Animated Button -->
+        <a href="https://harun-frost.github.io/Government-Project-2.10.2024/" class="cool-button">Open the Website</a>
+    </div>
+
+    <!-- Footer with "By Harun Ferizovic" -->
+    <footer>
+        By Harun Ferizovic
+    </footer>
+
+</body>
+</html>
